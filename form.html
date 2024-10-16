@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Formulario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
 
     body {
@@ -67,6 +68,23 @@
     @media (max-width : 800px) {
         input[type="text"] {
             width: 80%;
+        }
+    }
+
+    /*MEDIA QUERIES PARA TABLET*/
+
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+
+        fieldset {
+          margin-top: 20%;
+        }
+    }
+
+    /*MEDIA QUERIES*/
+    @media screen and (min-width: 320px) and (max-width: 576px) {
+
+        h1 {
+            font-size: 1em;
         }
     }
         
