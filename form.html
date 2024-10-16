@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <style>
+
+    body {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    font: 13px/22px Helvetica, Arial, sans-serif;
+    background-image: url(img/intro_flower.png);
+    text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    fieldset {
+
+        border-radius: 20px;
+        border: 1px dotted green;
+        background-color: rgba(255, 255, 255, 0.758);
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 5%;
+    }
+
+    input {
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    label {
+        font-weight: bolder ;
+    }
+
+
+    input [required] {
+        border-color: blue ;
+    }
+
+    input:invalid {
+        border-color: red;
+    }
+
+    input:valid {
+        border-color: green;
+    }
+
+    .botonEnviar {
+        color: white;
+        background-color: green;
+        font-size: 1.5em;
+    }
+
+    .botonEnviar:hover {
+        background-color: rgb(119, 224, 119);
+    }
+
+    /*media queries para el formulario*/
+
+    /*Dado que sobresale el input del fieldset cuando hacemos la pantalla mini,
+    lo ajustamos haciendo que el input llegue al 80% del fieldset*/
+    @media (max-width : 800px) {
+        input[type="text"] {
+            width: 80%;
+        }
+    }
+        
+    </style>
+    </head>
+    
+    <body>
+
+    <form autocomplete="on">
+
+        <fieldset>
+        <h1>Bienvenido/a a nuestro formulario !</h1>
+        <label>Nombre:</label><br>
+        <input type="text" size="40" title="nombre" name="nombre" autofocus required/><br>
+        <label>Correo electrónico: </label><br>
+        <input type="text" size="40" title="email" name="email" required/><br>
+        <label>Contraseña:</label><br>
+        <input type="password" size="8" title="********" name="password" required/><br>
+        <label>Fecha de nacimiento: </label><br>
+        <input type="date" value="2000-02-03" name="nacimiento"/><br>
+        <label>¿Cuántas plantas o flores estás cuidando actualmente? <br>[0-6] </label><br>
+        <input type="range" min="1" max="10" value="2" step="1" name="adiccion"/><br>
+        <label>¿Qué categoría de flores es tu preferida? </label><br>
+        <input type="checkbox" name="categoriaflores1" value="Flores Silvestres"/>Flores Silvestres<br>
+        <input type="checkbox" name="categoriaflores2" value="Flores Tropicales"/>Flores Silvestres<br>
+        <input type="checkbox" name="categoriaflores3" value="Flores Perennes"/>Flores Silvestres<br>
+        <input type="checkbox" name="categoriaflores4" value="Flores de Jardín"/>Flores Silvestres<br>
+        <label>¿Cuál es tu color de flor favorito?</label><br>
+        <input type="color" value="#FF0000" title="Color de flores favorito" name="color_preferido"/><br>
+        <input type="submit" class="botonEnviar" value="Enviar">
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
